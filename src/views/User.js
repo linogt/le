@@ -111,6 +111,28 @@ function User() {
                   <Row>
                     <Col className="pr-1" md="6">
                       <FormGroup>
+                        <label>Contrato</label>
+                        <Input
+                          defaultValue="Aprovado"
+                          placeholder="fafadqdq"
+                          type="text"
+                        />
+                      </FormGroup>
+                    </Col>
+                    <Col className="pl-1" md="6">
+                      <FormGroup>
+                        <label>Valor do Lance</label>
+                        <Input
+                          defaultValue="R$10.000,00"
+                          placeholder="Last Name"
+                          type="text"
+                        />
+                      </FormGroup>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col className="pr-1" md="6">
+                      <FormGroup>
                         <label>Status</label>
                         <Input
                           defaultValue="Aprovado"
@@ -123,7 +145,7 @@ function User() {
                       <FormGroup>
                         <label>Data Última Alteração</label>
                         <Input
-                          defaultValue="Faker"
+                          defaultValue="01/02/2020"
                           placeholder="Last Name"
                           type="text"
                         />
