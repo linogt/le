@@ -45,7 +45,7 @@ function User() {
               </CardHeader>
               <CardBody>
                 <Form>
-
+                
                   <Row>
                     <Col className="pr-1" md="6">
                       <FormGroup>
@@ -134,14 +134,11 @@ function User() {
                     <Col className="pr-1" md="6">
                       <FormGroup>
                         <label>Status</label>
-                        <select defaultValue="Aprovado">
-                          <option value="Aprovado" style={{ color: 'green' }}>
-                            Aprovado
-                          </option>
-                          <option value="Recusado" style={{ color: 'red' }}>
-                            Recusado
-                          </option>
-                        </select>
+                        <Input
+                          defaultValue="Aprovado"
+                          placeholder="Company"
+                          type="text" style={{color:'green'}}
+                        />
                       </FormGroup>
                     </Col>
                     <Col className="pl-1" md="6">
@@ -155,8 +152,8 @@ function User() {
                       </FormGroup>
                     </Col>
                   </Row>
-
-
+                  
+              
                 </Form>
               </CardBody>
             </Card>
