@@ -36,7 +36,7 @@ import {
 
 
 function User() {
-  const [disabledFields, setDisabledFields] = useState(true);
+  const [disabledFields, setDisabledFields] = useState(false);
   const toggleDisabled = () => {
     setDisabledFields(!disabledFields);
   };
@@ -75,7 +75,17 @@ function User() {
                     </Col>
                   </Row>
                   <Row>
-                    <Col md="12">
+                  <Col  className="pr-1" md="4">
+                      <FormGroup>
+                        <label>CPF</label>
+                        <Input
+                          defaultValue="Melbourne, Australia"
+                          placeholder="Home Address"
+                          type="text"
+                          disabled={disabledFields}/>
+                      </FormGroup>
+                    </Col>
+                    <Col  className="px-1"md="8">
                       <FormGroup>
                         <label>Endereço</label>
                         <Input
