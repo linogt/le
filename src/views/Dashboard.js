@@ -45,7 +45,7 @@ function Dashboard() {
                   <Col md="8" xs="7">
                     <div className="numbers">
                       <p className="card-category">Status</p>
-                      <CardTitle tag="p">Aprovado</CardTitle>
+                      <CardTitle tag="p"></CardTitle>
                       <p />
                     </div>
                   </Col>
@@ -67,7 +67,7 @@ function Dashboard() {
                   <Col md="8" xs="7">
                     <div className="numbers">
                       <p className="card-category">Valor do Lance</p>
-                      <CardTitle tag="p">R$ 1.345,00</CardTitle>
+                      <CardTitle tag="p"></CardTitle>
                       <p />
                     </div>
                   </Col>
@@ -87,7 +87,7 @@ function Dashboard() {
                   <Col md="8" xs="7">
                     <div className="numbers">
                       <p className="card-category">Contrato</p>
-                      <CardTitle tag="p">23</CardTitle>
+                      <CardTitle tag="p"></CardTitle>
                       <p />
                     </div>
                   </Col>
@@ -104,7 +104,7 @@ function Dashboard() {
                   <Col md="12" xs="12">
                     <div className="numbers">
                       <p className="card-category">Nome</p>
-                      <CardTitle tag="p">Gabriel Lino Topa Garcia</CardTitle>
+                      <CardTitle tag="p">Desenvolvido por Gabriel Garcia</CardTitle>
                       <p />
                     </div>
                   </Col>
@@ -119,7 +119,7 @@ function Dashboard() {
                   <Col md="12" xs="12">
                     <div className="numbers">
                       <p className="card-category">CPF</p>
-                      <CardTitle tag="p">707.395.532-59</CardTitle>
+                      <CardTitle tag="p"></CardTitle>
                       <p />
                     </div>
                   </Col>
@@ -136,7 +136,7 @@ function Dashboard() {
                   <Col md="12" xs="12">
                     <div className="numbers">
                       <p className="card-category">Estado</p>
-                      <CardTitle tag="p">Mato Grosso do Sul</CardTitle>
+                      <CardTitle tag="p"></CardTitle>
                       <p />
                     </div>
                   </Col>
@@ -151,7 +151,7 @@ function Dashboard() {
                   <Col md="12" xs="12">
                     <div className="numbers">
                       <p className="card-category">Cidade</p>
-                      <CardTitle tag="p">Campo Grande</CardTitle>
+                      <CardTitle tag="p"></CardTitle>
                       <p />
                     </div>
                   </Col>
@@ -168,7 +168,7 @@ function Dashboard() {
                   <Col md="12" xs="12">
                     <div className="numbers">
                       <p className="card-category">Endereço</p>
-                      <CardTitle tag="p">Rua Japão 221, Joquei Club</CardTitle>
+                      <CardTitle tag="p"></CardTitle>
                       <p />
                     </div>
                   </Col>
@@ -183,7 +183,7 @@ function Dashboard() {
                   <Col md="12" xs="12">
                     <div className="numbers">
                       <p className="card-category">CEP</p>
-                      <CardTitle tag="p">79080450</CardTitle>
+                      <CardTitle tag="p"></CardTitle>
                       <p />
                     </div>
                   </Col>
