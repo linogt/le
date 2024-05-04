@@ -16,8 +16,8 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
 
+import React, { useState } from "react";
 // reactstrap components
 import {
   Button,
@@ -33,7 +33,13 @@ import {
   Col,
 } from "reactstrap";
 
+
+
 function User() {
+  const [disabledFields, setDisabledFields] = useState(true);
+  const toggleDisabled = () => {
+    setDisabledFields(!disabledFields);
+  };
   return (
     <>
       <div className="content">
@@ -41,7 +47,7 @@ function User() {
           <Col md="8">
             <Card className="card-user">
               <CardHeader>
-                <CardTitle tag="h5">Análise de Proposta</CardTitle>
+                <CardTitle tag="h5" onClick={toggleDisabled}>Análise de Proposta</CardTitle>
               </CardHeader>
               <CardBody>
                 <Form>
@@ -54,7 +60,7 @@ function User() {
                           defaultValue="Chet"
                           placeholder="Company"
                           type="text"
-                        />
+                          disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
                     <Col className="pl-1" md="6">
@@ -64,7 +70,7 @@ function User() {
                           defaultValue="Faker"
                           placeholder="Last Name"
                           type="text"
-                        />
+                          disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
                   </Row>
@@ -76,7 +82,7 @@ function User() {
                           defaultValue="Melbourne, Australia"
                           placeholder="Home Address"
                           type="text"
-                        />
+                          disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
                   </Row>
@@ -88,7 +94,7 @@ function User() {
                           defaultValue="Melbourne"
                           placeholder="City"
                           type="text"
-                        />
+                          disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
                     <Col className="px-1" md="4">
@@ -98,13 +104,13 @@ function User() {
                           defaultValue="Australia"
                           placeholder="Country"
                           type="text"
-                        />
+                          disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
                     <Col className="pl-1" md="4">
                       <FormGroup>
                         <label>CEP</label>
-                        <Input placeholder="ZIP Code" type="number" />
+                        <Input placeholder="ZIP Code" type="number"  disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
                   </Row>
@@ -116,7 +122,7 @@ function User() {
                           defaultValue="Aprovado"
                           placeholder="fafadqdq"
                           type="text"
-                        />
+                          disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
                     <Col className="pl-1" md="6">
@@ -126,7 +132,7 @@ function User() {
                           defaultValue="R$10.000,00"
                           placeholder="Last Name"
                           type="text"
-                        />
+                          disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
                   </Row>
@@ -138,7 +144,7 @@ function User() {
                           defaultValue="Aprovado"
                           placeholder="Company"
                           type="text" style={{color:'green'}}
-                        />
+                          disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
                     <Col className="pl-1" md="6">
@@ -148,7 +154,7 @@ function User() {
                           defaultValue="01/02/2020"
                           placeholder="Last Name"
                           type="text"
-                        />
+                          disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
                   </Row>

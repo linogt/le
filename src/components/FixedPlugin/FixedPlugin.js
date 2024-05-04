@@ -39,6 +39,17 @@ function FixedPlugin(props) {
           <li className="header-title">SIDEBAR BACKGROUND</li>
           <li className="adjustments-line">
             <div className="badge-colors text-center">
+            <span
+                className={
+                  props.activeColor === "blue"
+                    ? "badge filter badge-info active"
+                    : "badge filter badge-info"
+                }
+                data-color="blue"
+                onClick={() => {
+                  props.handleBgClick("info");
+                }}
+              />
               <span
                 className={
                   props.bgColor === "black"
