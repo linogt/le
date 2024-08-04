@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "ajv": "^8.17.1",
     "bootstrap": "4.6.2",
     "chart.js": "3.9.1",
     "perfect-scrollbar": "1.5.5",
