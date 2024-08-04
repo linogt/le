@@ -60,6 +60,7 @@ function User() {
                           defaultValue="Chet"
                           placeholder="Company"
                           type="text"
+                          style={{color:'#555555'}}
                           disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
@@ -70,6 +71,7 @@ function User() {
                           defaultValue="Faker"
                           placeholder="Last Name"
                           type="text"
+                          style={{color:'#555555'}}
                           disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
@@ -82,6 +84,7 @@ function User() {
                           defaultValue="Melbourne, Australia"
                           placeholder="Home Address"
                           type="text"
+                          style={{color:'#555555'}}
                           disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
@@ -92,6 +95,7 @@ function User() {
                           defaultValue="Melbourne, Australia"
                           placeholder="Home Address"
                           type="text"
+                          style={{color:'#555555'}}
                           disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
@@ -104,6 +108,7 @@ function User() {
                           defaultValue="Melbourne"
                           placeholder="City"
                           type="text"
+                          style={{color:'#555555'}}
                           disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
@@ -113,6 +118,7 @@ function User() {
                         <Input
                           defaultValue="Australia"
                           placeholder="Country"
+                          style={{color:'#555555'}}
                           type="text"
                           disabled={disabledFields}/>
                       </FormGroup>
@@ -120,7 +126,7 @@ function User() {
                     <Col className="pl-1" md="4">
                       <FormGroup>
                         <label>CEP</label>
-                        <Input placeholder="ZIP Code" type="number"  disabled={disabledFields}/>
+                        <Input placeholder="ZIP Code" type="number" style={{color:'#555555'}} disabled={disabledFields}/>
                       </FormGroup>
                     </Col>
                   </Row>
@@ -131,6 +137,7 @@ function User() {
                         <Input
                           defaultValue="Aprovado"
                           placeholder="fafadqdq"
+                          style={{color:'#555555'}}
                           type="text"
                           disabled={disabledFields}/>
                       </FormGroup>
@@ -141,6 +148,7 @@ function User() {
                         <Input
                           defaultValue="R$10.000,00"
                           placeholder="Last Name"
+                          style={{color:'#555555'}}
                           type="text"
                           disabled={disabledFields}/>
                       </FormGroup>
@@ -152,6 +160,7 @@ function User() {
                         <label>Status</label>
                         <Input
                           defaultValue="Aprovado"
+                          
                           placeholder="Company"
                           type="text" style={{color:'green'}}
                           disabled={disabledFields}/>
@@ -163,6 +172,7 @@ function User() {
                         <Input
                           defaultValue="01/02/2020"
                           placeholder="Last Name"
+                          style={{color:'#555555'}}
                           type="text"
                           disabled={disabledFields}/>
                       </FormGroup>
