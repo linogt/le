@@ -32,7 +32,6 @@ import {
   Container,
   InputGroup,
   InputGroupText,
-  InputGroupAddon,
   Input,
 } from "reactstrap";
 
@@ -128,11 +127,11 @@ function Header(props) {
           <form>
             <InputGroup className="no-border">
               <Input placeholder="Search..." />
-              <InputGroupAddon addonType="append">
+              <InputGroupText addonType="append">
                 <InputGroupText>
                   <i className="nc-icon nc-zoom-split" />
                 </InputGroupText>
-              </InputGroupAddon>
+              </InputGroupText>
             </InputGroup>
           </form>
           <Nav navbar>

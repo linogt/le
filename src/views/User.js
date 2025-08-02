@@ -28,10 +28,10 @@ import {
   Form,
   Input,
   Row,
-  Col,
+  Col,Label,
 } from "reactstrap";
-
-
+import { IMaskInput } from "react-imask";
+import { NumericFormat } from "react-number-format";
 
 function User() {
   const [disabledFields, setDisabledFields] = useState(false);
@@ -77,104 +77,141 @@ function User() {
                   <Row>
                   <Col  className="pr-1" md="4">
                       <FormGroup>
-                        <label>CPF</label>
-                        <Input
-                          defaultValue="Melbourne, Australia"
-                          placeholder="Home Address"
-                          type="text"
-                          style={{color:"black"}}
-                          disabled={disabledFields}/>
-                      </FormGroup>
+        <Label>CPF</Label>
+        <IMaskInput
+          mask="000.000.000-00"
+          disabled={disabledFields}
+          placeholder="000.000.000-00"
+          style={{ color: "black", width: '100%', padding: '0.375rem 0.75rem', borderRadius: '.25rem', border: '1px solid #ced4da' }}
+        />
+      </FormGroup>
                     </Col>
-                    <Col  className="px-1"md="8">
-                      <FormGroup>
-                        <label>Endereço</label>
-                        <Input
-                          defaultValue="Melbourne, Australia"
-                          placeholder="Home Address"
-                          type="text"
-                          style={{color:"black"}}
-                          disabled={disabledFields}/>
-                      </FormGroup>
-                    </Col>
+                   <Col className="px-1" md="8">
+  <FormGroup>
+    <label>Endereço</label>
+    <Input
+      defaultValue="Melbourne, Australia"
+      placeholder="Home Address"
+      type="text"
+      style={{ color: "black", height: "34.6px" }}
+      disabled={disabledFields}
+    />
+  </FormGroup>
+</Col>
+
                   </Row>
                   <Row>
-                    <Col className="pr-1" md="4">
-                      <FormGroup>
-                        <label>Cidade</label>
-                        <Input
-                          defaultValue="Melbourne"
-                          placeholder="City"
-                          type="text"
-                          style={{color:"black"}}
-                          disabled={disabledFields}/>
-                      </FormGroup>
-                    </Col>
-                    <Col className="px-1" md="4">
-                      <FormGroup>
-                        <label>Estado</label>
-                        <Input
-                          defaultValue="Australia"
-                          placeholder="Country"
-                          style={{color:"black"}}
-                          type="text"
-                          disabled={disabledFields}/>
-                      </FormGroup>
-                    </Col>
-                    <Col className="pl-1" md="4">
-                      <FormGroup>
-                        <label>CEP</label>
-                        <Input placeholder="ZIP Code" type="number" style={{color:"black"}} disabled={disabledFields}/>
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="pr-1" md="6">
-                      <FormGroup>
-                        <label>Contrato</label>
-                        <Input
-                          defaultValue="Aprovado"
-                          placeholder="fafadqdq"
-                          style={{color: "black"}}
-                          type="text"
-                          disabled={disabledFields}/>
-                      </FormGroup>
-                    </Col>
-                    <Col className="pl-1" md="6">
-                      <FormGroup>
-                        <label>Valor do Lance</label>
-                        <Input
-                          defaultValue="R$10.000,00"
-                          placeholder="Last Name"
-                          style={{color: "black"}}
-                          type="text"
-                          disabled={disabledFields}/>
-                      </FormGroup>
-                    </Col>
+                   <Col className="pr-1" md="4">
+  <FormGroup>
+    <label>Cidade</label>
+    <Input
+      defaultValue="Campo Grande"
+      placeholder="City"
+      type="text"
+      style={{ color: "black", height: "34.6px" }}
+      disabled={disabledFields}
+    />
+  </FormGroup>
+</Col>
+
+<Col className="px-1" md="4">
+  <FormGroup>
+    <label>Estado</label>
+    <Input
+      defaultValue="Mato Grosso do Sul"
+      placeholder="Country"
+      type="text"
+      style={{ color: "black", height: "34.6px" }}
+      disabled={disabledFields}
+    />
+  </FormGroup>
+</Col>
+
+                <Col className="pl-1" md="4">
+      <FormGroup>
+        <Label>CEP</Label>
+        <IMaskInput
+          mask="00000-000"
+          disabled={disabledFields}
+          placeholder="00000-000"
+          style={{
+            color: "black",
+            width: "100%",
+            padding: "0.375rem 0.75rem",
+            borderRadius: ".25rem",
+            border: "1px solid #ced4da",
+          }}
+          // opcional: define o tipo para acessibilidade
+          inputMode="numeric"
+        />
+      </FormGroup>
+    </Col>
                   </Row>
                   <Row>
                     <Col className="pr-1" md="6">
-                      <FormGroup>
-                        <label>Status</label>
-                        <Input
-                          defaultValue="Aprovado"
-                          
-                          placeholder="Company"
-                          type="text" style={{color:'green'}}
-                          disabled={disabledFields}/>
-                      </FormGroup>
-                    </Col>
+  <FormGroup>
+    <label>Contrato</label>
+    <Input
+      defaultValue="Aprovado"
+      placeholder="fafadqdq"
+      style={{ color: "black", height: "34.6px" }}
+      type="text"
+      disabled={disabledFields}
+    />
+  </FormGroup>
+</Col>
+
+                   <Col className="pl-1" md="6">
+      <FormGroup>
+        <Label>Valor do Lance</Label>
+        <NumericFormat
+          prefix="R$ "
+          thousandSeparator="."
+          decimalSeparator=","
+          decimalScale={2}
+          fixedDecimalScale={true}
+          allowNegative={false}
+          disabled={disabledFields}
+          defaultValue={10000}
+          placeholder="R$ 0,00"
+          style={{
+            color: "black",
+            width: "100%",
+            padding: "0.375rem 0.75rem",
+            borderRadius: ".25rem",
+            border: "1px solid #ced4da",
+          }}
+          // para funcionar dentro do Reactstrap, passa customInput:
+          customInput={React.forwardRef((props, ref) => <input {...props} ref={ref} />)}
+        />
+      </FormGroup>
+    </Col>
+                  </Row>
+                  <Row>
+                   <Col className="pr-1" md="6">
+  <FormGroup>
+    <label>Status</label>
+    <Input
+      defaultValue="Aprovado"
+      placeholder="Company"
+      type="text"
+      style={{ color: "green", height: "34.6px" }}
+      disabled={disabledFields}
+    />
+  </FormGroup>
+</Col>
+
                     <Col className="pl-1" md="6">
-                      <FormGroup>
-                        <label>Data Última Alteração</label>
-                        <Input
-                          defaultValue="01/02/2020"
-                          placeholder="Last Name"
-                          style={{color: 'black'}}
-                          type="text"
-                          disabled={disabledFields}/>
-                      </FormGroup>
-                    </Col>
+        <FormGroup>
+          <Label>Data Última Alteração</Label>
+          <IMaskInput
+            mask="00/00/0000"
+            disabled={disabledFields}
+            placeholder="dd/mm/aaaa"
+            style={{ color: "black", width: '100%', padding: '0.375rem 0.75rem', borderRadius: '.25rem', border: '1px solid #ced4da' }}
+          />
+        </FormGroup>
+      </Col>
                   </Row>
                   
               
