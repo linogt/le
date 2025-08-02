@@ -56,7 +56,7 @@ function User() {
                       <FormGroup>
                         <label>Nome</label>
                         <Input
-                          defaultValue="Chet"
+                       
                           placeholder="Company"
                           type="text"
                           style={{color:"black"}}
@@ -67,7 +67,7 @@ function User() {
                       <FormGroup>
                         <label>Sobrenome</label>
                         <Input
-                          defaultValue="Faker"
+                       
                           placeholder="Last Name"
                           type="text"
                           style={{color:"black"}}
@@ -91,7 +91,7 @@ function User() {
   <FormGroup>
     <label>Endereço</label>
     <Input
-      defaultValue="Melbourne, Australia"
+     
       placeholder="Home Address"
       type="text"
       style={{ color: "black", height: "34.6px" }}
