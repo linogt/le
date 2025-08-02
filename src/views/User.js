@@ -18,6 +18,7 @@
 */
 
 import React, { useState } from "react";
+
 // reactstrap components
 import {
   Card,
@@ -82,7 +83,7 @@ function User() {
           mask="000.000.000-00"
           disabled={disabledFields}
           placeholder="000.000.000-00"
-          style={{ color: "black", width: '100%', padding: '0.375rem 0.75rem', borderRadius: '.25rem', border: '1px solid #ced4da' }}
+          style={{  backgroundColor: disabledFields ? "rgb(227, 227, 227)" : "white",color: "black", width: '100%', padding: '0.375rem 0.75rem', borderRadius: '.25rem', border: '1px solid #ced4da' }}
         />
       </FormGroup>
                     </Col>
@@ -140,6 +141,7 @@ function User() {
             padding: "0.375rem 0.75rem",
             borderRadius: ".25rem",
             border: "1px solid #ced4da",
+            backgroundColor: disabledFields ? "rgb(227, 227, 227)" : "white"
           }}
           // opcional: define o tipo para acessibilidade
           inputMode="numeric"
@@ -175,6 +177,7 @@ function User() {
           defaultValue={10000}
           placeholder="R$ 0,00"
           style={{
+             backgroundColor: disabledFields ? "rgb(227, 227, 227)" : "white",
             color: "black",
             width: "100%",
             padding: "0.375rem 0.75rem",
@@ -206,9 +209,10 @@ function User() {
           <Label>Data Última Alteração</Label>
           <IMaskInput
             mask="00/00/0000"
+            
             disabled={disabledFields}
             placeholder="dd/mm/aaaa"
-            style={{ color: "black", width: '100%', padding: '0.375rem 0.75rem', borderRadius: '.25rem', border: '1px solid #ced4da' }}
+            style={{  backgroundColor: disabledFields ? "rgb(227, 227, 227)" : "white", color: "black", width: '100%', padding: '0.375rem 0.75rem', borderRadius: '.25rem', border: '1px solid #ced4da' }}
           />
         </FormGroup>
       </Col>
