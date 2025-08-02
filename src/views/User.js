@@ -150,53 +150,57 @@ function User() {
     </Col>
                   </Row>
                   <Row>
-                 
-<Col className="pr-1" md="6">
+                    <Col className="pr-1" md="6">
   <FormGroup>
     <label>Contrato</label>
-    <NumericFormat
-      prefix="R$ "
-      allowNegative={false}
-      disabled={disabledFields}
-      defaultValue={10000}
-      placeholder="R$ 0"
-      style={{ 
-        color: "black", 
-        height: "34.6px", 
-        width: "100%", 
-        padding: "0.375rem 0.75rem",
-        borderRadius: ".25rem",
-        border: "1px solid #ced4da",
-        backgroundColor: disabledFields ? "rgb(227, 227, 227)" : "white"
-      }}
-      customInput={React.forwardRef((props, ref) => <input {...props} ref={ref} />)}
-    />
+   <NumericFormat
+          prefix="R$ "
+          thousandSeparator="."
+          decimalSeparator=","
+          decimalScale={2}
+          fixedDecimalScale={true}
+          allowNegative={false}
+          disabled={disabledFields}
+          placeholder="R$ 0,00"
+          style={{
+             backgroundColor: disabledFields ? "rgb(227, 227, 227)" : "white",
+            color: "black",
+            width: "100%",
+            padding: "0.375rem 0.75rem",
+            borderRadius: ".25rem",
+            border: "1px solid #ced4da",
+          }}
+          // para funcionar dentro do Reactstrap, passa customInput:
+          customInput={React.forwardRef((props, ref) => <input {...props} ref={ref} />)}
+        />
   </FormGroup>
 </Col>
 
-
-        <Col className="pl-1" md="6">
-  <FormGroup>
-    <Label>Valor do Lance</Label>
-    <NumericFormat
-      prefix="R$ "
-      allowNegative={false}
-      disabled={disabledFields}
-      defaultValue={10000}
-      placeholder="R$ 0"
-      style={{
-        backgroundColor: disabledFields ? "rgb(227, 227, 227)" : "white",
-        color: "black",
-        width: "100%",
-        padding: "0.375rem 0.75rem",
-        borderRadius: ".25rem",
-        border: "1px solid #ced4da",
-      }}
-      customInput={React.forwardRef((props, ref) => <input {...props} ref={ref} />)}
-    />
-  </FormGroup>
-</Col>
-
+                   <Col className="pl-1" md="6">
+      <FormGroup>
+        <Label>Valor do Lance</Label>
+        <NumericFormat
+          prefix="R$ "
+          thousandSeparator="."
+          decimalSeparator=","
+          decimalScale={2}
+          fixedDecimalScale={true}
+          allowNegative={false}
+          disabled={disabledFields}
+          placeholder="R$ 0,00"
+          style={{
+             backgroundColor: disabledFields ? "rgb(227, 227, 227)" : "white",
+            color: "black",
+            width: "100%",
+            padding: "0.375rem 0.75rem",
+            borderRadius: ".25rem",
+            border: "1px solid #ced4da",
+          }}
+          // para funcionar dentro do Reactstrap, passa customInput:
+          customInput={React.forwardRef((props, ref) => <input {...props} ref={ref} />)}
+        />
+      </FormGroup>
+    </Col>
                   </Row>
                   <Row>
                    <Col className="pr-1" md="6">
